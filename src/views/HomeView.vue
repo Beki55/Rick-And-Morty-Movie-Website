@@ -267,6 +267,7 @@ export default {
                 <router-link
                   :to="{ name: 'location', params: { id: location.id } }"
                 >
+                  <div>
                   <h3>{{ location.id }}</h3>
                   <br />
                   <h3>{{ location.name }}</h3>
@@ -275,6 +276,7 @@ export default {
                     {{ location.dimension }}
                     <i class="fas fa-map-marker-alt"></i>
                   </h3>
+                    </div>
                 </router-link>
               </swiper-slide>
             </swiper>
