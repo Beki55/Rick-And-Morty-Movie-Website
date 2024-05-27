@@ -72,7 +72,7 @@ const { result, error, loading } = useQuery(locationQuery);
           <p v-if="loading" class="text-blue-500">Loading...</p>
           <div v-else class="flex flex-wrap justify-center mx-4">
             <div v-for="loc in result.location.residents" :key="loc.id"
-              class="flex flex-col md:flex-row bg-slate-800 text-white p-6 m-4 rounded-lg shadow-lg md:w-1/2 lg:w-1/3">
+              class="flex flex-col md:flex-row bg-slate-800  p-6 m-4 rounded-lg shadow-lg md:w-1/2 lg:w-1/3">
               <div class="w-full md:w-1/3 mb-4 md:mb-0">
                 <img :src="loc.image" alt="Resident Image" class="w-full h-auto rounded-lg" />
               </div>
