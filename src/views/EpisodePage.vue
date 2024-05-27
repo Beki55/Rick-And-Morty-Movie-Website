@@ -26,6 +26,7 @@ const { result, loading, error } = useQuery(EPISODE_QUERY);
 </script>
 
 <template>
+  <div class="">
   <section>
     <div class="flex justify-center items-center">
       <div>
@@ -39,23 +40,23 @@ const { result, loading, error } = useQuery(EPISODE_QUERY);
             <p v-if="error">Something went wrong...</p>
             <p v-if="loading">Loading...</p>
             <div v-else>
-              <div class="flex flex-wrap bg-black p-10 w-[800px] text-2xl mb-4">
+              <div class="flex flex-wrap bg-slate-800 p-10 w-[800px] text-2xl mb-4">
                 <div class="flex justify-center">
                   <div>
                     Episode Name :
-                    <span class="text-red-400">
+                    <span class="text-blue-400">
                       {{ result.episode.name }}<br
                     /></span>
                     Episode Air_Date :
-                    <span class="text-red-400"
+                    <span class="text-blue-400"
                       >{{ result.episode.air_date }}<br
                     /></span>
                     Episode :
-                    <span class="text-red-400"
+                    <span class="text-blue-400"
                       >{{ result.episode.episode }}<br
                     /></span>
                     Episode Created :
-                    <span class="text-red-400"
+                    <span class="text-blue-400"
                       >{{ result.episode.created }}<br
                     /></span>
                   </div>
@@ -69,39 +70,40 @@ const { result, loading, error } = useQuery(EPISODE_QUERY);
   </section>
 
   <section>
-    <p class="ml-96 my-6 text-3xl">All characters in the episode</p>
-    <div class="flex justify-center">
-      <p v-if="error">Something went wrong...</p>
-      <p v-if="loading">Loading...</p>
-      <div class="h-96 overflow-y-auto mx-24" v-else>
-        <div
-          v-for="char in result.episode.characters"
-          :key="char.id"
-          class="flex flex-wrap bg-black p-10 w-[800px] text-2xl mb-4"
-        >
-          <div class="flex justify-center w-2/3">
-            <div class="">
-              Character Name :
-              <span class="text-red-400"> {{ char.name }}<br /></span>
-              Character Status :
-              <span class="text-red-400">{{ char.status }}<br /></span>
-              Character Gender :
-              <span class="text-red-400">{{ char.gender }}<br /></span>
-              Character Species :
-              <span class="text-red-400">{{ char.species }}<br /></span>
-            </div>
+  <p class="ml-96 my-6 text-3xl">All characters in the episode</p>
+  <div class="flex justify-center">
+    <p v-if="error">Something went wrong...</p>
+    <p v-if="loading">Loading...</p>
+    <div class="flex flex-wrap justify-center mx-4" v-else>
+      <div
+        v-for="char in result.episode.characters"
+        :key="char.id"
+        class="flex flex-wrap mx-4 bg-slate-800 p-10 w-full md:w-1/2 lg:w-1/3 text-2xl mb-4"
+      >
+        <div class="flex justify-center w-2/3">
+          <div class="text-sm">
+            Character Name :
+            <span class="text-blue-400"> {{ char.name }}<br /></span>
+            Character Status :
+            <span class="text-blue-400">{{ char.status }}<br /></span>
+            Character Gender :
+            <span class="text-blue-400">{{ char.gender }}<br /></span>
+            Character Species :
+            <span class="text-blue-400">{{ char.species }}<br /></span>
           </div>
-          <div class="w-1/3">
-            <img
-              class="h-fit"
-              :src="char.image"
-              alt="{{ char.name }} Photo"
-            /><br />
-          </div>
+        </div>
+        <div class="w-1/3">
+          <img
+            class=""
+            :src="char.image"
+            :alt="char.name"
+          /><br />
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+</div>
 </template>
 
 <style></style>

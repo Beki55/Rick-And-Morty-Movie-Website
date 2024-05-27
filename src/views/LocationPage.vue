@@ -31,36 +31,25 @@ const { result, error, loading } = useQuery(locationQuery);
       <div class="flex justify-center items-center">
         <div>
           <p class="flex justify-center text-4xl mt-24 pt-12">Location</p>
-          <span class="flex justify-center text-4xl text-blue-400 mb-12"
-            >——o——</span
-          >
+          <span class="flex justify-center text-4xl text-blue-400 mb-12">——o——</span>
           <div>
             <p class="mb-6 text-2xl">Full detail of the location</p>
             <div class="items-center justify-center">
               <p v-if="error">Something went wrong...</p>
               <p v-if="loading">Loading...</p>
               <div v-else>
-                <div
-                  class="flex flex-wrap bg-black p-10 w-[800px] text-2xl mb-4"
-                >
+                <div class="flex flex-wrap bg-slate-800 p-10 w-[800px] text-2xl mb-4">
                   <div class="flex justify-center">
                     <div>
                       Location Name :
-                      <span class="text-red-400">
-                        {{ result.location.name }}<br
-                      /></span>
+                      <span class="text-blue-400">
+                        {{ result.location.name }}<br /></span>
                       Location Type :
-                      <span class="text-red-400"
-                        >{{ result.location.type }}<br
-                      /></span>
+                      <span class="text-blue-400">{{ result.location.type }}<br /></span>
                       Location Dimension :
-                      <span class="text-red-400"
-                        >{{ result.location.dimension }}<br
-                      /></span>
+                      <span class="text-blue-400">{{ result.location.dimension }}<br /></span>
                       Location Created :
-                      <span class="text-red-400"
-                        >{{ result.location.created }}<br
-                      /></span>
+                      <span class="text-blue-400">{{ result.location.created }}<br /></span>
                     </div>
                   </div>
                 </div>
@@ -72,30 +61,37 @@ const { result, error, loading } = useQuery(locationQuery);
     </section>
 
     <section>
-      <div class="flex justify-center items-center mb-48">
-        <div class="items-center justify-center">
-          <p class="my-6 ml-24 text-2xl">Residents in the location</p>
-          <p v-if="error">Something went wrong...</p>
-          <p v-if="loading">Loading...</p>
-          <div class="h-96 overflow-y-auto mx-24" v-else>
-            <div
-              v-for="loc in result.location.residents"
-              :key="loc.id"
-              class="flex flex-wrap bg-black p-10 w-[800px] text-2xl mb-4"
-            >
-              <div class="w-1/4">
-                <img :src="loc.image" alt="" />
+      <div class="container mx-auto">
+        <div class="flex justify-center items-center mb-12">
+          <div class="text-center">
+            <p class="my-6 text-3xl font-semibold">Residents in the Location</p>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <p v-if="error" class="text-red-900">Something went wrong...</p>
+          <p v-if="loading" class="text-blue-500">Loading...</p>
+          <div v-else class="flex flex-wrap justify-center mx-4">
+            <div v-for="loc in result.location.residents" :key="loc.id"
+              class="flex flex-col md:flex-row bg-slate-800 text-white p-6 m-4 rounded-lg shadow-lg md:w-1/2 lg:w-1/3">
+              <div class="w-full md:w-1/3 mb-4 md:mb-0">
+                <img :src="loc.image" alt="Resident Image" class="w-full h-auto rounded-lg" />
               </div>
-              <div class="flex justify-center w-3/4">
-                <div>
-                  Resident Name :
-                  <span class="text-red-400"> {{ loc.name }}<br /></span>
-                  Resident Status :
-                  <span class="text-red-400">{{ loc.status }}<br /></span>
-                  Resident Species :
-                  <span class="text-red-400">{{ loc.species }}<br /></span>
-                  Resident Gender :
-                  <span class="text-red-400">{{ loc.gender }}<br /></span>
+              <div class="md:w-2/3 md:pl-6">
+                <div class="text-lg mb-2">
+                  <span class="font-semibold">Resident Name : </span>
+                  <span class="text-blue-400"> {{ loc.name }} </span>
+                </div>
+                <div class="text-lg mb-2">
+                  <span class="font-semibold">Resident Status : </span>
+                  <span class="text-blue-400"> {{ loc.status }} </span>
+                </div>
+                <div class="text-lg mb-2">
+                  <span class="font-semibold">Resident Species : </span>
+                  <span class="text-blue-400"> {{ loc.species }} </span>
+                </div>
+                <div class="text-lg">
+                  <span class="font-semibold">Resident Gender : </span>
+                  <span class="text-blue-400"> {{ loc.gender }} </span>
                 </div>
               </div>
             </div>

@@ -44,7 +44,7 @@
             ></div>
           </div>
         </div>
-        <div class="mt-8 w-3/10">
+        <div class="mt-8 text-sm w-3/10">
           <p class="text-8xl">4.8</p>
           <div class="m-4 flex justify-center">
             <i class="fas fa-star text-yellow-500"></i>

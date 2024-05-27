@@ -6,14 +6,14 @@
         src="../assets/image.jpg"
         alt=""
       />
-      <button class="bg-red-500 rounded-lg p-2 w-48 mt-2 ml-12">
+      <button class="bg-red-900 rounded-lg p-2 w-48 mt-2 ml-12">
         Add to cart
       </button>
-      <button class="bg-red-500 rounded-lg p-2 w-48 mt-2 ml-12">
+      <button class="bg-red-900 rounded-lg p-2 w-48 mt-2 ml-12">
         Your favourite
       </button>
-      <button class="bg-red-500 rounded-lg p-2 w-48 mt-2 ml-12">TV Show</button>
-      <button class="bg-red-500 rounded-lg p-6 w-48 mt-32 ml-12">
+      <button class="bg-red-900 rounded-lg p-2 w-48 mt-2 ml-12">TV Show</button>
+      <button class="bg-red-900 rounded-lg p-6 w-48 mt-32 ml-12">
         Scientific fiction
       </button>
     </div>
@@ -24,7 +24,7 @@
           >——o—o——</span
         >
         <p class="mt-2 flex flex-row items-center text-3xl">Rick and Morty</p>
-        <button class="float-right bg-red-500 rounded-lg p-4">
+        <button class="float-right bg-red-900 rounded-lg p-4">
           + Add to favovrite
         </button>
       </div>

@@ -42,25 +42,32 @@ const { result, error, loading } = useQuery(characterQuery);
             <p v-if="error">Something went wrong...</p>
             <p v-if="loading">Loading...</p>
             <div v-else>
-              <div class="flex flex-wrap bg-black p-10 w-[800px] text-2xl mb-4">
+              <div class="flex flex-wrap bg-slate-800 p-10 w-[800px] text-2xl mb-4">
                 <div class="flex justify-center w-2/3">
                   <div>
                     Character Name :
-                    <span class="text-red-400">
+                    <span class="text-blue-400">
                       {{ result.character.name }}<br
                     /></span>
                     Character Status :
-                    <span class="text-red-400"
+                    <span class="text-blue-400"
                       >{{ result.character.status }}<br
                     /></span>
                     Character Gender :
-                    <span class="text-red-400"
+                    <span class="text-blue-400"
                       >{{ result.character.gender }}<br
                     /></span>
                     Character Species :
-                    <span class="text-red-400"
+                    <span class="text-blue-400"
                       >{{ result.character.species }}<br
                     /></span>
+                    <p class="text-lg mt-12">
+                      location:
+                      <span class="text-blue-400"
+                        >( {{ result.character.location.name }} )
+                        <i class="fas fa-map-marker-alt"></i>
+                      </span>
+                    </p>
                   </div>
                 </div>
                 <div class="w-1/3">
@@ -79,37 +86,34 @@ const { result, error, loading } = useQuery(characterQuery);
   </section>
 
   <section>
-    <div>
-      <p class="m-10 text-4xl">
-        Last known location of the character ==><span class="m-10 text-red-400"
-          >( {{ result.character.location.name }} )
-          <i class="fas fa-map-marker-alt"></i>
-        </span>
-      </p>
-    </div>
+    <div></div>
   </section>
 
   <section>
     <div class="">
-      <div>
+      <div class="justify-center">
         <p class="m-10 mt-24 text-4xl">Episodes the character participated</p>
         <p v-if="error">Something went wrong...</p>
         <p v-if="loading">Loading...</p>
-        <div class="flex mb-8 overflow-y-auto" v-else>
-          <div class="flex m-10">
+        <div class="flex flex-wrap justify-center mb-8" v-else>
+          <div class="flex flex-wrap w-auto mx-10">
             <div
-              class="w-96"
+              class="flex flex-wrap m-4"
               v-for="epi in result.character.episode"
               :key="epi.id"
             >
-              Episode Name :
-              <span class="text-red-400"> {{ epi.name }}<br /></span> Episode
-              Episode :
-              <span class="text-red-400">{{ epi.episode }}<br /></span> Episode
-              AirDate :
-              <span class="text-red-400">{{ epi.air_date }}<br /></span> Episode
-              Created :
-              <span class="text-red-400">{{ epi.created }}<br /></span>
+              <div class="flex justify-center">
+                <div class="text-sm w-[300px]">
+                  Episode Name :
+                  <span class="text-blue-400"> {{ epi.name }}<br /></span>
+                  Episode Episode :
+                  <span class="text-blue-400">{{ epi.episode }}<br /></span>
+                  Episode AirDate :
+                  <span class="text-blue-400">{{ epi.air_date }}<br /></span>
+                  Episode Created :
+                  <span class="text-blue-400">{{ epi.created }}<br /></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
