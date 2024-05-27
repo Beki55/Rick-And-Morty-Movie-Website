@@ -78,19 +78,19 @@ const { result, error, loading } = useQuery(locationQuery);
               </div>
               <div class="md:w-2/3 md:pl-6">
                 <div class="text-lg mb-2">
-                  <span class="font-semibold">Resident Name : </span>
+                  <span>Resident Name : </span>
                   <span class="text-blue-400"> {{ loc.name }} </span>
                 </div>
                 <div class="text-lg mb-2">
-                  <span class="font-semibold">Resident Status : </span>
+                  <span>Resident Status : </span>
                   <span class="text-blue-400"> {{ loc.status }} </span>
                 </div>
                 <div class="text-lg mb-2">
-                  <span class="font-semibold">Resident Species : </span>
+                  <span>Resident Species : </span>
                   <span class="text-blue-400"> {{ loc.species }} </span>
                 </div>
                 <div class="text-lg">
-                  <span class="font-semibold">Resident Gender : </span>
+                  <span>Resident Gender : </span>
                   <span class="text-blue-400"> {{ loc.gender }} </span>
                 </div>
               </div>
