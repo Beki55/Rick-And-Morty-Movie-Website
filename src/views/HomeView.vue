@@ -150,6 +150,7 @@ export default {
       </div>
     </section>
 
+  
     <section id="E">
       <div>
         <p class="flex justify-center text-4xl mt-12">Episodes</p>
@@ -163,7 +164,7 @@ export default {
           <p v-else>
             <swiper
               :modules="modules"
-              :slides-per-view="8"
+              :slides-per-view="6"
               :space-between="50"
               navigation
               :pagination="{ clickable: true }"
@@ -180,10 +181,11 @@ export default {
                   :to="{ name: 'episode', params: { id: episode.id } }"
                 >
                   <div class="text-white">
-                    <h3>{{ episode.id }}</h3>
+                    <img class="w-96" src="../assets/images (3).jfif" alt="" />
+                    <br />
+                    <h3>{{ episode.episode }}</h3>
                     <br />
                     <h3>{{ episode.name }}</h3>
-                    <br />
                     <i class="fas fa-film"></i>
                   </div>
                 </router-link>
