@@ -30,6 +30,7 @@ const CHARACTERS_QUERY = gql`
   query {
     episodes {
       results {
+        id
         episode
         name
       }
