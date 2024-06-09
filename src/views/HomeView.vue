@@ -121,7 +121,6 @@ export default {
           <p v-else>
             <swiper
               :modules="modules"
-<<<<<<< HEAD
               :breakpoints="{
                 640: {
                   slidesPerView: 1,
@@ -136,10 +135,6 @@ export default {
                   spaceBetween: 30,
                 },
               }"
-=======
-              :slides-per-view="6"
-              :space-between="50"
->>>>>>> 5eaa4026cfb39c74ad046b0b6e903fc94dc5ae90
               navigation
               :pagination="{ clickable: true }"
               :scrollbar="{ draggable: true }"
@@ -154,7 +149,6 @@ export default {
                 <router-link
                   :to="{ name: 'episode', params: { id: episode.id } }"
                 >
-<<<<<<< HEAD
                   <div class="text-white mx-auto">
                     <img
                       class="mx-auto"
@@ -168,15 +162,6 @@ export default {
                     <br />
                     <h3 class="text-lg md:text-xl mx-24">{{ episode.name }}</h3>
                     <i class="fas fa-film mx-24"></i>
-=======
-                  <div class="text-white">
-                    <img class="w-96" src="../assets/images (3).jfif" alt="" />
-                    <br />
-                    <h3>{{ episode.episode }}</h3>
-                    <br />
-                    <h3>{{ episode.name }}</h3>
-                    <i class="fas fa-film"></i>
->>>>>>> 5eaa4026cfb39c74ad046b0b6e903fc94dc5ae90
                   </div>
                 </router-link>
               </swiper-slide>
@@ -289,11 +274,7 @@ export default {
                 <router-link
                   :to="{ name: 'location', params: { id: location.id } }"
                 >
-<<<<<<< HEAD
                   <div class="text-white justify-center mx-24">
-=======
-                  <div class="text-white">
->>>>>>> 5eaa4026cfb39c74ad046b0b6e903fc94dc5ae90
                     <h3>{{ location.id }}</h3>
                     <br />
                     <h3>{{ location.name }}</h3>
