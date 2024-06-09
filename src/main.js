@@ -12,7 +12,10 @@ import { DefaultApolloClient } from "@vue/apollo-composable";
 import { ApolloClient, InMemoryCache } from "@apollo/client/core";
 import router from "../src/router";
 
+
 import App from "./App.vue";
+
+
 
 const cache = new InMemoryCache();
 
@@ -28,6 +31,5 @@ const app = createApp({
 
   render: () => h(App),
 });
-
 app.use(router);
 app.mount("#app");
