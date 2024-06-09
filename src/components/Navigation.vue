@@ -6,6 +6,7 @@
           Rick And Morty
         </router-link>
       </div>
+<<<<<<< HEAD
       <div class="block lg:hidden">
         <button id="menu-button" class="text-white focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -14,6 +15,9 @@
         </button>
       </div>
       <div class="hidden lg:block">
+=======
+      <div>
+>>>>>>> 5eaa4026cfb39c74ad046b0b6e903fc94dc5ae90
         <ul class="flex space-x-4 mr-12">
           <li>
             <router-link to="/" class="text-white">Home</router-link>
