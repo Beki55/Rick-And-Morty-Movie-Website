@@ -6,7 +6,7 @@
     >
     <div class="flex flex-col lg:flex-row">
       <div class="mt-4 mx-4 md:mx-10 w-full lg:w-1/2">
-        <div class="mb-6 md:mx-8 flex flex-col md:flex-row justify-center">
+        <div class="mb-6 md:mx-8 flex flex-col md:flex-row items-center justify-center">
           <img
             class="hover:scale-110 transition-transform duration-300 w-48"
             src="../assets/rickmorty.webp"
